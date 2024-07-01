@@ -1,40 +1,40 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     background: rgb(34, 34, 34);
+    height: 100vh; /* Ensure full viewport height */
 }
 
-.main{
+.main {
     text-align: center;
-    align-items: center;
     padding: 20px;
-    width: 30rem;
-    line-height: 10rem;
+    max-width: 600px;
+    width: 90%;
 }
 
-.stopwatch{
-    padding: 20px;
+.stopwatch {
     font-size: 5rem;
     color: white;
     box-shadow: 0px 0px 15px 15px rgba(0, 0, 0, 0.35);
-    margin-top: 25vh;
+    margin-top: 20vh; /* Adjust margin for better centering */
+    padding: 20px;
 }
 
-.btns{
-    padding: 50px;
+.btns {
     display: flex;
     justify-content: space-around;
+    margin-top: 30px; /* Adjust spacing between stopwatch and buttons */
 }
 
-.btns button{
+.btns button {
     font-size: 1.5rem;
     padding: 10px 20px;
     background-color: rgb(0, 150, 150);
@@ -45,22 +45,39 @@ body{
     box-shadow: 0px 0px 15px 15px rgba(0, 0, 0, 0.15);
 }
 
-.btns button:hover{
+.btns button:hover {
     background-color: rgb(0, 189, 189);
 }
 
-.btns button:active{
+.btns button:active {
     background-color: rgb(0, 124, 124);
 }
 
-#red{
+#red {
     background-color: rgb(214, 0, 0);
 }
 
-#red:hover{
+#red:hover {
     background-color: rgb(240, 0, 0);
 }
 
-#red:active{
+#red:active {
     background-color: rgb(122, 0, 0);
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .stopwatch {
+        font-size: 4rem; /* Decrease font size for smaller screens */
+    }
+
+    .btns {
+        flex-direction: column; /* Stack buttons vertically on smaller screens */
+        margin-top: 20px; /* Adjust spacing between stopwatch and buttons */
+    }
+
+    .btns button {
+        font-size: 1.2rem; /* Decrease button font size */
+        margin-bottom: 10px; /* Add space between buttons */
+    }
 }
